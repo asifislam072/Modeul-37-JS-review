@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <input id="value" type="text">
+    <button onclick="addLocalStor()">submit</button>
+    <div id="text"></div>
+
+    <script>
+        const addLocalStor = () => {
+            const inputID = document.getElementById('input');
+            const inputValue = inputID.value;
+
+            const valueID = document.getElementById('value')
+            const valueValue = valueID.value
+            localstor(inputValue,valueValue)
+        }
+
+        const localstor = (input,value) => {
+            const content = document.getElementById('text')
+            const p = document.createElement('p')
+            p.innerHTML = `${input} text ${value}`
+            content.appendChild(p)
+            localStorage.setItem(input,value)
+        }
+
+        // text gula display te save korbo ki vabe
+        // aktu hins din..ki rkm funtion likle tik hbe0
+    </script>
+</body>
+</html>
